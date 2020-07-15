@@ -78,7 +78,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     justify-content: space-between;
     display: flex;
     padding: 30px 30px;
