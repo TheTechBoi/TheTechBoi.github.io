@@ -15,12 +15,25 @@
 
         <section id="secBackground">
             <div id="space"></div>
-                <p id="studentTxt">Right now I'm an 11th-grade student at Galatasaray High School</p>
-                <a href="https://www.linkedin.com/in/tuna-ercan-4a1bb3197/">My LinkedIn Page</a>
-                <p></p>
-                <a href="mailto:tuna.ercan04@gmail.com">Send a Mail</a>
-            <div id="space_"></div>
+
+            <p id="studentTxt">Right now I'm an 11th-grade student at Galatasaray High School</p>
+            <a href="https://www.linkedin.com/in/tuna-ercan-4a1bb3197/">My LinkedIn Page</a>
+            <p></p>
+            <a href="mailto:tuna.ercan04@gmail.com">Send a Mail</a>
         </section>
+
+        <div id="space__"></div>
+
+        <section id="faceSec">
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="space_"></div>
 
         <div id="navigation">
             <ul>
@@ -48,6 +61,21 @@
         window.onscroll = ()=>{
             let progressHeight = (window.pageYOffset / totalHeight) * 100;
             progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+    <script type="text/javascript">
+        document.querySelector('body').addEventListener('mousemove', eyeball);
+        function eyeball()
+        {
+            var eye = document.querrySelectorAll(".eye");
+            eye.forEach(function(eye){
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+                let radian = Math.atan2(event.pageX - x, event.pageY -y);
+                let rot = (radian * (180 / Math.PI) * -1) + 270;
+                //eye.style.transform = "rotate(" + rot + "deg)";
+            });
         }
     </script>
 
