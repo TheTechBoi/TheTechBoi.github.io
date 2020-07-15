@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
     <section class="page" id="sec">
 
     <header>
@@ -41,7 +44,7 @@
 
     </section> 
 
-
+    <footer id="nameFooter"><div> © 2020 Tuna Ercan</div></footer>
 
     <script type="text/javascript">
         function toggle()
@@ -51,6 +54,14 @@
         }
     </script>
 
-    <footer><div> © 2020 Tuna Ercan</div></footer>
+    <script type="text/javascript">
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = ()=>{
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
 </body>
 </html>
