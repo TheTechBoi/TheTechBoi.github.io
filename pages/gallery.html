@@ -2,52 +2,54 @@
 <html lang="en">
 <head>
     <title>PageOfAPear</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/gallery_style.css" />
 </head>
 <body>
-    <section class="page" id="sec">
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
 
-    <header>
-        <div id="toggle" onclick="toggle()"> </div>
-    </header>
-    
-    <section class="homePhotoSection">
-        <img src="../images/myPhoto.jpg"/>
-    </section>
+    <section class="page" id="all">
 
-    <section  class="welcome">
-        <div>
-            Hi! <br> <br>
-            I'm a student who really likes science and technology. <br> 
-            And on this page, you can find some of my hobby-work.
-            <br><br><br>
+        <header id="galleryHeader">
+            <div id="toggle" onclick="toggle()"> </div>
+        </header>
+
+        <a id="instaLink" href="https://www.instagram.com/photo_and_pear/">Instagram Page</a>
+
+        <section id="secBackground">
+            <div class="row">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+
+        <div id="navigation">
+            <ul>
+                <li><a href="../index.html">Welcome</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
 
-        <ul>
-            <li> <img src="../images/1f.JPG"/> </li>
-            <li> <img src="../images/2f.JPG"/> </li>
-            <li> <img src="../images/3f.JPG"/> </li>
-        </ul>
-    </section>
-
-    <div id="navigation">
-        <ul>
-            <li><a href="../index.html">Welcome</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-
     </section> 
-
 
 
     <script type="text/javascript">
         function toggle()
         {
-            var sec = document.getElementById('sec');
-            sec.classList.toggle('active');
+            var all = document.getElementById('all');
+            all.classList.toggle('active');
+        }
+    </script>
+
+    <script type="text/javascript">
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = ()=>{
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
         }
     </script>
 
