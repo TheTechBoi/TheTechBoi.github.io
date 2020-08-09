@@ -122,12 +122,11 @@ header #toggle::after
     width: 100%;
     min-height: 600px;
     background-color: white;
-    text-align: center;
 }
 
 #space
 {
-    height: 180px;
+    height: 200px;
 }
 #space_
 {
@@ -141,23 +140,59 @@ h1
     align-self: center;
     font-family: mainFont;
     color: #3d3d3d;
-    transform: translate(-43%,-50%);
+    transform: translate(-50%,55%);
     font-size: 3em;
-    top: 3%;
+    padding-top: 0;
     text-decoration: underline;
 }
 
-p
+.projectLi
 {
-    margin: 10px;
-    padding: 5px;
+    display: list-item;
+    list-style: none;
+    margin-top: 35px;
+}
+
+.projectLi a div
+{
+    display: inline-block;
+    position: relative;
+    background-color: antiquewhite;
+    width: 50%;
+    min-width: 350px;
+    height: 70px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    left: 48.5%;
+    transform: translate(-50%,-50%);
+    border-radius: 50px;
+}
+
+.projectLi a div:hover 
+{
+    box-shadow: 0 4px 8px 0 rgba(177, 145, 255, 0.8), 0 6px 20px 0 rgba(177, 145, 255, 0.8);
+}
+
+p
+{   
+    margin-top: 17px;
     font-family: mainFont;
+    width: 100%;
+    height: 100%;
     font-size: 2em;
     color: #3d3d3d;
-    position: absolute;
-    top: 37%; 
-    left: 50%; 
-    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600) {
+    .projectLi a div {
+        left: 0%;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
 }
 
 footer {
