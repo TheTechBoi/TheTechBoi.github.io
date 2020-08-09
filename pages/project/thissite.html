@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PageOfAPear</title>
+    <link rel="stylesheet" href="../../styles/info_style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class="page" id="all">
+
+
+        <header >
+            <div id="toggle" onclick="toggle()"> </div>
+        </header>
+
+        <section id="secBackground">
+        
+        </section>
+
+        <div id="navigation">
+            <ul>
+                <li><a href="../../index.html">Welcome</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../info.html">Info</a></li>
+            </ul>
+        </div>
+
+    </section> 
+
+
+    <script type="text/javascript">
+        function toggle()
+        {
+            var all = document.getElementById('all');
+            all.classList.toggle('active');
+        }
+    </script>
+    
+    <footer><div> © 2020 Tuna Ercan</div></footer>
+</body>
+</html>
