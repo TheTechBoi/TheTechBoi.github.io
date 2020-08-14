@@ -2,19 +2,47 @@
 <html lang="en">
 <head>
     <title>PageOfAPear</title>
-    <link rel="stylesheet" href="../../styles/info_style.css" />
+    <link rel="stylesheet" href="../../styles/projectPage_style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <section class="page" id="all">
 
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <section class="page" id="all">
 
         <header >
             <div id="toggle" onclick="toggle()"> </div>
         </header>
 
         <section id="secBackground">
-        
+
+            <section id="articleSection">
+
+                
+                <section id="titleSec"><h1>How I Made This Website</h1></section>
+                
+                <h2>Welcome!</h2>
+
+                <div class="paragSec">
+                    <p> &nbsp; Wait A Little!</p>
+                </div>
+
+                <h2>Why?</h2>
+
+                <div class="paragSec">
+                    <p> &nbsp; Wait A Little!</p>
+                </div>
+
+                <h2>How?</h2>
+
+                <div class="paragSec">
+                    <p> &nbsp; Sorry but Wait A Little!</p>
+                </div>
+
+            </section>  
+        <div id="space"></div>
         </section>
 
         <div id="navigation">
@@ -34,6 +62,15 @@
         {
             var all = document.getElementById('all');
             all.classList.toggle('active');
+        }
+    </script>
+
+    <script type="text/javascript">
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = ()=>{
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
         }
     </script>
     
