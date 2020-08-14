@@ -190,3 +190,27 @@ footer div{
     padding-left: 4px;
 }
 
+@media only screen and (max-width: 475px) {
+    header{
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    header #toggle
+    {
+        width: 40px;
+        height: 40px;
+    }
+
+    header #toggle::before
+    {
+        height: 5px;
+    }
+
+    header #toggle::after
+    {
+        height: 5px;
+    }
+
+}
