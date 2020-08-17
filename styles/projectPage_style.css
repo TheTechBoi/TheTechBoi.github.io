@@ -187,7 +187,7 @@ header #toggle::after
 
 #space
 {
-    height: 200px;
+    height: 50px;
 }
 #space_
 {
@@ -240,6 +240,18 @@ div.paragSec p
     font-family: mainFont;
     color: #3d3d3d;
     font-size: 1.5em;
+    text-align: justify;
+}
+
+#Info_Button
+{
+    text-decoration: none;
+    color: #f87666;
+}
+
+#Info_Button:hover
+{
+    color: #b191ff;
 }
 
 footer {
