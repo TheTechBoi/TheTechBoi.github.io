@@ -194,6 +194,12 @@ footer div{
     header{
         padding: 10px 15px;
     }
+
+    #instaLink
+    {
+        font-size: 1.5em;
+    }
+
 }
 
 @media only screen and (min-width: 1050px) {
