@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageOfAPear</title>
+    <link rel="stylesheet" href="../../styles/gsl_kodlama/mainpage_style.css" />
+</head>
+<body>
+    <section class="page" id="all">
+        
+        <h1>Hi!</h1>
+        
+        <section id="secBackground">
+            <div id="space"></div>s
+
+            <ul id="myProjectsUL">
+                <li class="projectLi">
+                    <a href="haftalar/hafta1.html">
+                        <div class="contentTitle">
+                            Hafta 1 
+                        </div>
+                    </a>    
+                </li>
+
+            </ul>
+
+        </section>
+
+    </section> 
+
+    <script type="text/javascript">
+        let progress = document.getElementById('progressBar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = ()=>{
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progress.style.height = progressHeight + "%";
+        }
+    </script>
+
+    <footer><div> © 2020 Tuna Ercan</div></footer>
+</body>
+</html>
